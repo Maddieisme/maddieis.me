@@ -6,7 +6,7 @@ body{
   background: #000;
   color: #fff;
 }
-/* font awesome stuff */
+/* font awesome stuff, never load these until i use them later 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
@@ -18,10 +18,6 @@ src: url('icons.woff2')
   font-family: 'icomoon';
   font-style: normal;
   src: url('icomoon.woff');
-}
-@font-face{
-  font-family: 'fira-code';
-  src: url('font.woff2');
 }
   .fab {
   font-family: 'Font Awesome 5 Brands', 'icomoon';
@@ -46,6 +42,11 @@ src: url('icons.woff2')
 .icon-align-justify:before {
   content: "\f039";
 }
+*/
+@font-face{
+  font-family: 'fira-code';
+  src: url('font.woff2');
+}
 
 h1{
   font-size: 80px;
@@ -61,7 +62,6 @@ left: 0;
 top: 25%;
 width: 100%;
 }
-
 a{
   padding-top: 20px;
   text-decoration: none;
