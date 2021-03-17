@@ -15,7 +15,6 @@ body {
 	font-display: block;
 	src: url('icons.woff2')
 }
-
 @font-face {
 	font-family: 'icomoon';
 	font-style: normal;
@@ -25,15 +24,12 @@ body {
 .fa-discord:before {
 	content: "\f392";
 }
-
 .fa-lastfm:before {
 	content: "\f202";
 }
-
 .fa-github:before {
 	content: "\f09b";
 }
-
 .fa-twitter:before {
 	content: "\f099";
 }
@@ -137,12 +133,8 @@ h2 {
 }
 
 .align {
-	min-height: 400px;
 	width: 100%;
-}
-
-.ico a {
-	padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 a {
@@ -210,20 +202,16 @@ section h2{
 	width: 100%;
 }
 
-.footer div {
-	font-size: 15px;
-}
-
 ul {
 	list-style-position: inside;
 	display: inline-block;
-	text-align: left;
 	margin-top: .2em;
 	margin-bottom: .2em;
 	padding-left: 0;
 	list-style: none;
 	overflow-x: auto;
 	white-space: nowrap;
+  font-size: 15px;
 }
 
 .footer li {
@@ -248,16 +236,14 @@ ul {
 	transition: all .2s ease-in-out;
 }
 
-.music img:hover,
-.projitem div {
+.music img:hover{
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 	transition: .2s ease;
 }
 
-.music img:active,
-.projitem div {
+.music img:active{
 	-webkit-transform: scale(.95);
 	-ms-transform: scale(.95);
 	transform: scale(.95);
@@ -303,7 +289,7 @@ ul {
 }
 
 .projitem {
-	width: 97%;
+	width: 94%;
 	max-width: 600px;
 	border-radius: 13px;
 	text-align: center;
