@@ -15,12 +15,6 @@ body {
 	font-display: block;
 	src: url('icons.woff2')
 }
-@font-face {
-	font-family: 'icomoon';
-	font-style: normal;
-	src: url('icomoon.woff');
-}
-
 .fa-discord:before {
 	content: "\f392";
 }
@@ -34,12 +28,8 @@ body {
 	content: "\f099";
 }
 
-.icon-align-justify:before {
-	content: "\f039";
-}
-
 .fab {
-	font-family: 'Font Awesome 5 Brands', 'icomoon';
+	font-family: 'Font Awesome 5 Brands';
 	font-weight: 400;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -49,7 +39,6 @@ body {
 	text-rendering: auto;
 	line-height: 1;
 }
-
 @font-face {
 	font-family: 'robotomono';
 	src: url('robotomono.woff2');
@@ -73,13 +62,19 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	z-index: 1;
-	background: rgb(13, 12, 13,.72) !important;
+	background: rgb(13, 12, 13,.8) !important;
 }
-
 .topnav #navLinks {
 	display: none;
 }
-
+.navname{
+  text-align: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+}
 .topnav a {
 	color: inherit;
 	font-size: 19px;
@@ -98,7 +93,7 @@ body {
 }
 
 .topnav i {
-	font-size: 19px;
+	font-size: 24px;
 }
 
 .topnav a:hover {
