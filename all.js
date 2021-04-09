@@ -9,15 +9,6 @@ if (x.style.display === "block") {
   x.style.display = "block";
   ico.innerText = "close";
   }
-	var x = document.getElementById("navLinks");
-  var ico = document.getElementById("ico");
-	if (x.style.display === "block") {
-		x.style.display = "none";
-    ico.innerText = "menu";
-	} else {
-		x.style.display = "block";
-    ico.innerText = "close";
-	}
 }
 //music widget
 async function init() {
