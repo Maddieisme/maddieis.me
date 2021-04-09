@@ -86,9 +86,11 @@ body {
 	z-index: 1;
 	background: rgb(13, 12, 13,.8) !important;
 }
+
 .topnav #navLinks {
 	display: none;
 }
+
 .navname{
   text-align: center;
   top: 0;
