@@ -178,12 +178,17 @@ a:active {
 
 .ico {
 	font-size: 35px;
-	padding: 10px;
+  width: 55px;
+  height: 30px;
 	background-color: rgb(33, 33, 35, .90);
 	border-radius: 13px;
 	margin-top: .7em;
 }
 
+a.ico{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
 .ico a:hover {
 	text-decoration: none;
 }
