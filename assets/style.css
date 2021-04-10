@@ -66,17 +66,13 @@ body {
 	src: url('robotomono.woff2');
 }
 
-#navLinks {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 .topnav {
 	overflow: hidden;
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 	opacity: 100%;
 	padding: 1px 1px;
-	padding-left: 5px;
+  padding-left: 5px;
 	text-align: left;
 	font-size: 19px;
 	position: fixed;
@@ -86,24 +82,31 @@ body {
 	z-index: 1;
 	background: rgb(13, 12, 13,.8) !important;
 }
+
+.topnav p{
+  padding-left: 20px;
+}
+
+#navLinks {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: left;
+}
+
 .topnav #navLinks {
 	display: none;
 }
 
-.navname{
-  text-align: center;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  position: absolute;
-}
 .topnav a {
 	color: inherit;
 	font-size: 19px;
-	padding: 10px 10px;
+	padding: 10px 20px;
 	text-decoration: none;
 	display: block;
+}
+
+#ico:active{
+  transition: .2s ease-in-out;
+  transform: rotate(180deg);
 }
 
 .topnav a.icon {
@@ -122,14 +125,6 @@ body {
 .topnav a:hover {
 	color: rgb(10 132 255);
 	text-decoration: none;
-}
-
-#navLinks a:active {
-	color: #0266D4;
-}
-
-.topnav p {
-	padding-left: 10px;
 }
 
 .active {
@@ -162,7 +157,7 @@ a {
 }
 
 a:hover {
-	color: #0266d4;
+	filter: brightness(70%);
 	text-decoration: underline;
 }
 
@@ -172,7 +167,7 @@ a.ico:hover {
 }
 
 a:active {
-	color: #1d3754;
+	filter: brightness(50%);
 	transition: ease-in-out .1s;
 }
 
@@ -183,14 +178,23 @@ a:active {
 	background-color: rgb(33, 33, 35, .90);
 	border-radius: 13px;
 	margin-top: .7em;
+  margin-left: 10px;
 }
 
 a.ico{
   padding-top: 10px;
   padding-bottom: 15px;
 }
+
 .ico a:hover {
 	text-decoration: none;
+}
+
+a.ico:active{
+  transition: .1s ease-in-out;
+  -webkit-transform: scale(.90);
+  -ms-transform: scale(.90);
+  transform: scale(.90);
 }
 
 .container {
@@ -205,6 +209,7 @@ section h2{
   padding-top: 20px;
   margin: 0;
 }
+
 .container section p {
 	margin: 0;
 	padding: .9em;
@@ -259,11 +264,12 @@ ul {
 	transition: all .2s ease-in-out;
 }
 
-.music img:hover{
+.music img:hover, .music a:hover{
 	-webkit-transform: scale(1.05);
 	-ms-transform: scale(1.05);
 	transform: scale(1.05);
 	transition: .2s ease;
+  filter: none;
 }
 
 .music img:active{
@@ -271,6 +277,7 @@ ul {
 	-ms-transform: scale(.95);
 	transform: scale(.95);
 	transition: .2s ease;
+  filter: none;
 }
 
 .nonblackbg {
@@ -319,7 +326,7 @@ ul {
 	margin: 0 auto;
 	margin-bottom: 1em;
 	background-color: rgb(33, 33, 35, .90);
-	transition: .2s ease-in-out;
+	transition: all .1s ease-in-out;
 }
 
 .projitem img {
@@ -344,14 +351,21 @@ ul {
 	color: white;
 }
 
-.projitem a:hover {
-	transition: .2s ease-in-out;
-	color: #0266d4;
+.projitem:hover, .projitem a:hover {
+  color: #017AFF;
+	transition: .1s ease-in-out;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.projitem a:active {
-	transition: .2s ease-in-out;
-	color: #1d3754;
+
+.projitem:active, .projitem a:active {
+  transition: .1s ease-in-out;
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  transform: scale(.95);
+	filter: brightness(50%);
 }
 
 @media only screen and  (min-width: 1000px){
