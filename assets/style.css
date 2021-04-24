@@ -6,7 +6,14 @@ body {
 	padding: 0;
 	height: 100%;
 	color: #fff;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 @font-face {
   font-family: 'Material Icons Round';
   font-style: normal;
@@ -37,18 +44,8 @@ body {
 	font-display: block;
 	src: url('icons.woff2')
 }
-.fa-discord:before {
-	content: "\f392";
-}
-.fa-lastfm:before {
-	content: "\f202";
-}
-.fa-github:before {
-	content: "\f09b";
-}
-.fa-twitter:before {
-	content: "\f099";
-}
+
+.fa-discord:before { content: "\f392"; } .fa-lastfm:before  { content: "\f202"; } .fa-github:before  { content: "\f09b"; } .fa-twitter:before { content: "\f099"; }
 
 .fab {
 	font-family: 'Font Awesome 5 Brands';
@@ -66,8 +63,7 @@ body {
 	src: url('robotomono.woff2');
 }
 
-.topnav {
-	overflow: hidden;
+nav {
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 	opacity: 100%;
@@ -80,23 +76,20 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	z-index: 1;
-	background: rgb(13, 12, 13,.8) !important;
+	background: rgb(13, 12, 13,.5);
 }
 
-.topnav p{
+nav p{
   padding-left: 20px;
 }
 
-#navLinks {
+nav ul{
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: left;
+  display: none
 }
 
-.topnav #navLinks {
-	display: none;
-}
-
-.topnav a {
+nav a {
 	color: inherit;
 	font-size: 19px;
 	padding: 10px 20px;
@@ -109,7 +102,7 @@ body {
   transform: rotate(180deg);
 }
 
-.topnav a.icon {
+nav a.icon {
 	background-color: none;
 	display: block;
 	position: absolute;
@@ -118,11 +111,11 @@ body {
 	padding: 20px 29px;
 }
 
-.topnav i {
+nav i {
 	font-size: 24px;
 }
 
-.topnav a:hover {
+nav a:hover {
 	color: rgb(10 132 255);
 	text-decoration: none;
 }
@@ -137,7 +130,7 @@ body {
 .align h1 {
 	font-size: 80px;
 	text-align: center;
-	padding-top: 100px;
+	padding-top: 30px;
 }
 
 h2 {
@@ -147,7 +140,7 @@ h2 {
 
 .align {
 	width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -201,6 +194,7 @@ a.ico:active{
 	text-align: center;
 	min-height: 100%;
 	position: relative;
+  padding-top: 50px;
 }
 
 section h2{
@@ -220,19 +214,11 @@ section h2{
 	width: 100%;
 	text-align: center;
 	background: rgb(13 12 13);
-	height: 74px;
-}
-
-.footerwrap {
-	text-align: center;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
 }
 
 ul {
 	list-style-position: inside;
-	display: inline-block;
+	display: inline-flex;
 	margin-top: .2em;
 	margin-bottom: .2em;
 	padding-left: 0;
@@ -246,10 +232,10 @@ ul {
 	display: inline-block;
 	padding-left: .4em;
 	padding-right: .4em;
+  padding-top: 10px;
 }
 
 .music {
-	padding-top: 74px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	width: 97%;
 	max-width: 350px;
@@ -260,7 +246,7 @@ ul {
 .music img {
 	object-fit: cover;
 	border-radius: 13px;
-	margin-top: 50px;
+	margin-top: 30px;
 	transition: all .2s ease-in-out;
 }
 
@@ -314,10 +300,6 @@ ul {
 	text-align: center;
 }
 
-#myLinks {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 .projitem {
 	width: 94%;
 	max-width: 600px;
@@ -359,7 +341,6 @@ ul {
   transform: scale(1.05);
 }
 
-
 .projitem:active, .projitem a:active {
   transition: .1s ease-in-out;
   -webkit-transform: scale(.95);
@@ -369,8 +350,39 @@ ul {
 }
 
 @media only screen and  (min-width: 1000px){
+  nav{
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a.icon{
+    display: none;
+  }
+
+    nav ul{
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul{
+    margin: 1;
+    padding-top: 8px;
+  }
+
+  nav ul a{
+    text-align: center;
+  }
+
   .nonblackbg{
     padding-left: 220px;
     padding-right: 220px;
+  }
+
+  nav p{
+    padding-left: none;
+    padding-right: 20px;
+  }
+  .container{
+    padding-top: 75px;
   }
 }
