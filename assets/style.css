@@ -1,13 +1,20 @@
 body {
 	font-family: 'robotomono';
 	font-weight: regular;
-	background: rgb(13,12,13);
+	background: rgba(var(--blackbg));
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	color: #fff;
+	color: var(--text-color);
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
+}
+
+:root{
+    --tint-color: #017AFF;
+    --blackbg: 12, 12, 13;
+    --graybg: #18181A;
+    --text-color: #fff
 }
 
 ::-webkit-scrollbar {
@@ -64,19 +71,18 @@ body {
 }
 
 nav {
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(var(--blackbg), .5);
+	 -webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 	opacity: 100%;
 	padding: 1px 1px;
   padding-left: 5px;
-	text-align: left;
 	font-size: 19px;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	margin: 0 auto;
 	z-index: 1;
-	background: rgb(13, 12, 13,.5);
 }
 
 nav p{
@@ -116,24 +122,21 @@ nav i {
 }
 
 nav a:hover {
-	color: rgb(10 132 255);
+  color: var(--tint-color);
+  filter: brightness(70%);
 	text-decoration: none;
 }
-
-.active {
-	-webkit-backdrop-filter: saturate(180%) blur(20px);
-	backdrop-filter: saturate(180%) blur(20px);
-	background-color: rgb(23 23 25);
-	color: white;
+nav a:active{
+  color: var(--tint-color);
+  filter: brightness(50%);
 }
-
 .align h1 {
 	font-size: 80px;
 	text-align: center;
 	padding-top: 30px;
 }
 
-h2 {
+h2, .align h2 {
 	font-size: 20px;
 	text-align: center;
 }
@@ -145,7 +148,7 @@ h2 {
 
 a {
 	text-decoration: none;
-	color: #017AFF;
+	color: var(--tint-color);
 	outline: 1px #000;
 }
 
@@ -210,10 +213,9 @@ section h2{
 	padding-bottom: 1em;
 }
 
-.footer {
+footer {
 	width: 100%;
 	text-align: center;
-	background: rgb(13 12 13);
 }
 
 ul {
@@ -228,7 +230,7 @@ ul {
   font-size: 15px;
 }
 
-.footer li {
+footer li {
 	display: inline-block;
 	padding-left: .4em;
 	padding-right: .4em;
@@ -249,6 +251,7 @@ ul {
 	border-radius: 13px;
 	margin-top: 30px;
 	transition: all .2s ease-in-out;
+	border: none;
 }
 
 .music img:hover, .music a:hover{
@@ -324,6 +327,7 @@ ul {
 	margin: 0;
 	padding: .9em;
 	padding-bottom: 1em;
+  padding-top: .25em;
 }
 
 .projitem h2 {
@@ -335,7 +339,7 @@ ul {
 }
 
 .projitem:hover, .projitem a:hover {
-  color: #017AFF;
+  color: var(--tint-color);
 	transition: .1s ease-in-out;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
