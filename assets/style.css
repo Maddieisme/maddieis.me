@@ -11,7 +11,7 @@ body {
 }
 
 :root{
-    --tint-color: #017AFF;
+    --tint-color: rgb(10, 132, 255);
     --blackbg: 12, 12, 13;
     --graybg: #18181A;
     --text-color: #fff
