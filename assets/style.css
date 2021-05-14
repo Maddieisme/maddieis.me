@@ -175,15 +175,12 @@ a:active {
 	border-radius: 13px;
 	margin-top: .7em;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 a.ico{
   padding-top: 10px;
   padding-bottom: 15px;
-}
-
-.ico a:hover {
-	text-decoration: none;
 }
 
 a.ico:active{
