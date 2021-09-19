@@ -41,24 +41,20 @@
 
 <body onload="init()">
 
-		<nav>
-    <a href="/index.html"><p>MATT</p></a>
+  <nav id="nav">
+		<a href="javascript:void(0);" id="menu" class="frostedglass" onclick="topnav()" aria-label="Hamburger menu button">MENU</a>
     <ul id="navLinks">
+			<li><a href="/index.html">HOME</a></li>
 			<li><a href="about.html">ABOUT</a></li>
 			<li><a href="projects.html">Projects</a></li>
 			<li><a href="music.html">Music</a></li>
-			<li><a href="https://github.com/MattSn0w1/mattsn0w1.github.io">Source</a></li>
 		</ul>
-
-    <a href="javascript:void(0);" class="icon" onclick="topnav()" aria-label="Hamburger menu button">
-			<i class="material-icons-round" id="ico">menu</i>
-    </a>
-  </nav>
+  	</nav>
 
 <div class="container">
         <div class="music">
             <h1>Music Status</h1>
-            <script src="/all.js" type="text/JavaScript"></script>
+            <script src="../all.js" type="text/JavaScript"></script>
             <noscript>Enable JavaScript in order to see this!</noscript>
             <figure>
                 <a id="url"><img id="album" width="300" height="300" alt="albumcover"></a>
