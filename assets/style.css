@@ -64,7 +64,6 @@
 
 @media (prefers-color-scheme: light) {
      :root {
-        /*--tint-color: rgb(10, 132, 255); */
         --tint-color: rgb(0, 122, 255);
         --blackbg: 255, 255, 255;
         --graybg: 222, 222, 222;
@@ -114,18 +113,22 @@ body {
 a {
     color: var(--tint-color);
     outline: 1px #000;
+    text-decoration: none;
 }
 
 a:hover {
     filter: brightness(70%);
+    color: var(--tint-color);
 }
 
 a.ico:hover {
     text-decoration: none;
 }
 
+nav ul a:active,
 a:active {
     filter: brightness(50%);
+    color: var(--tint-color);
     transition: ease-in-out .1s;
 }
 
@@ -138,8 +141,6 @@ nav {
     margin: 0 auto;
     z-index: 1;
     text-transform: uppercase;
-    font-family: 'robotomono';
-    /*width: 100%;*/
 }
 
 nav ul {
@@ -200,17 +201,14 @@ nav ul {
     }
 }
 
-nav ul a {
-    color: inherit;
-    font-size: 19px;
-    padding: 10px 30px;
-    text-decoration: none;
-    display: block;
-}
-
 nav a {
     color: inherit;
-    text-decoration: none;
+}
+
+nav ul a {
+    font-size: 19px;
+    padding: 10px 30px;
+    display: block;
 }
 
 #menu {
@@ -231,11 +229,6 @@ nav a:hover {
     color: var(--text-color);
     filter: brightness(100%);
     text-decoration: underline;
-}
-
-nav a:active {
-    color: var(--tint-color);
-    filter: brightness(50%);
 }
 
 .align h1 {
@@ -327,7 +320,6 @@ footer li {
 }
 
 .music {
-    font-family: 'robotomono';
     letter-spacing: 1.5px;
     word-spacing: -1px;
     width: 97%;
@@ -401,14 +393,6 @@ footer li {
     transition: all .1s ease-in-out;
 }
 
-.projitem img {
-    margin-top: 1em;
-    width: 160px;
-    height: 160px;
-    border-radius: 13px;
-    object-fit: cover;
-}
-
 .projitem p {
     margin: 0;
     padding: .9em;
@@ -428,17 +412,12 @@ footer li {
 .projitem a:hover {
     color: var(--tint-color);
     transition: .1s ease-in-out;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    filter: brightness(75%);
 }
 
 .projitem:active,
 .projitem a:active {
     transition: .1s ease-in-out;
-    -webkit-transform: scale(.95);
-    -ms-transform: scale(.95);
-    transform: scale(.95);
     filter: brightness(50%);
 }
 
