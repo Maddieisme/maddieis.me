@@ -6,21 +6,13 @@
     src: url('icons.woff2')
 }
 
-.fa-discord:before {
-    content: "\f392";
-}
+.fa-discord:before { content: "\f392"; }
 
-.fa-lastfm:before {
-    content: "\f202";
-}
+.fa-lastfm:before { content: "\f202"; }
 
-.fa-github:before {
-    content: "\f09b";
-}
+.fa-github:before { content: "\f09b"; }
 
-.fa-twitter:before {
-    content: "\f099";
-}
+.fa-twitter:before { content: "\f099"; }
 
 .fab {
     font-family: 'Font Awesome 5 Brands';
@@ -57,45 +49,19 @@
     -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-    font-family: 'robotomono';
-    src: url('robotomono.woff2');
+:root {
+    --text-color: #fff;
+    --blackbg: 20, 20, 20;
+    --graybg: 40, 40, 40;
+    --tint-color: rgb(14, 176, 186);
 }
 
-@media (prefers-color-scheme: light) {
-     :root {
-        --tint-color: rgb(0, 122, 255);
-        --blackbg: 255, 255, 255;
-        --graybg: 222, 222, 222;
-        --text-color: #000;
-    }
-    a {
-        color: var(--tint-color);
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-     :root {
-        --tint-color: rgb(255, 255, 255);
-        --text-color: #fff;
-        --blackbg: 0, 0, 0;
-        --graybg: 33, 33, 33;
-        --tint-color: rgb(10, 132, 255);
-    }
-    a {
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
+a:hover {
+    filter: brightness(80%);
 }
 
 body {
-    font-family: 'robotomono';
+    font-family: 'Rubik', sans-serif;
     font-weight: regular;
     background: rgba(var(--blackbg));
     margin: 0;
@@ -112,20 +78,18 @@ body {
 
 a {
     color: var(--tint-color);
-    outline: 1px #000;
     text-decoration: none;
 }
 
+/*TODO: dont use this workaround to fix a bug with align h3 anchor things not working*/
+
+.align h3:hover,
 a:hover {
     filter: brightness(70%);
     color: var(--tint-color);
 }
 
-a.ico:hover {
-    text-decoration: none;
-}
-
-nav ul a:active,
+.align h3:active,
 a:active {
     filter: brightness(50%);
     color: var(--tint-color);
@@ -133,14 +97,32 @@ a:active {
 }
 
 nav {
+    background:rgb(64, 64, 64);
+    border-radius: 13px;
+    margin: 22px;
+    width: 80%;
     padding: 1px 1px;
     font-size: 17px;
     position: fixed;
     top: 0;
     left: 0;
-    margin: 0 auto;
     z-index: 1;
+    width: auto;
     text-transform: uppercase;
+}
+
+i{
+    width: auto;
+}
+
+nav ul {
+    opacity: 100%;
+    display: none;
+    text-align: left;
+    letter-spacing: 1.5px;
+    padding-top: 9px;
+    margin: 1;
+    animation: fade 0.15s forwards linear;
 }
 
 nav ul {
@@ -150,55 +132,6 @@ nav ul {
     letter-spacing: 3px;
     padding-top: 9px;
     margin: 1;
-    animation: fade 0.15s forwards linear;
-}
-
-@-webkit-keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: .5
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 nav a {
@@ -213,32 +146,26 @@ nav ul a {
 
 #menu {
     display: block;
-    font-size: 20px;
-    margin: 22px;
-    height: 30px;
-    width: 50px;
-    padding: 10px;
-    border-radius: 13px;
-}
-
-.underline:hover {
-    text-decoration: none;
+    font-size: 30px;
+    padding: 12px;
 }
 
 nav a:hover {
-    color: var(--text-color);
+    color: var(--tint-color);
     filter: brightness(100%);
-    text-decoration: underline;
 }
 
-.align h1 {
+nav a:active{
+    filter: brightness(50%);
+}
+
+.align h1{
     font-size: 80px;
     text-align: center;
     padding-top: 30px;
 }
 
-h2,
-.align h2 {
+h2, .align h2{
     font-size: 20px;
     text-align: center;
 }
@@ -252,10 +179,11 @@ h2,
     font-size: 35px;
     width: 55px;
     height: 30px;
-    background-color: rgb(var(--graybg), .90);
+    background-color: rgb(var(--graybg), 1);
     border-radius: 13px;
     margin-left: 10px;
     text-decoration: none;
+    box-shadow: 0px 0px 11px 0px rgb(0 0 0 / 58%);
 }
 
 a.ico {
@@ -390,6 +318,7 @@ footer li {
     margin: 0 auto;
     margin-bottom: 1em;
     background-color: rgba(var(--graybg), .90);
+    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 58%);
     transition: all .1s ease-in-out;
 }
 
@@ -422,7 +351,7 @@ footer li {
 }
 
 .frostedglass {
-    background-color: rgba(var(--blackbg), .5);
+    background-color: rgba(64, 64, 64, .5);
     backdrop-filter: brightness(80%);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
@@ -434,27 +363,26 @@ footer li {
         justify-content: center;
         right: 0;
         left: 0;
+        background: none;
+        margin: 12px;
     }
     nav #menu {
         display: none;
     }
     nav ul {
-        margin-top: 10px;
         display: flex;
         justify-content: center;
-        background-color: rgba(var(--blackbg), .5);
-        backdrop-filter: brightness(80%);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
+        background-color: rgb(64, 64, 64);
         border-radius: 13px;
         padding-top: 0;
         margin: 1;
         height: 1;
         padding: 5px;
+        box-shadow: 2px 2px 11px 1px rgb(0 0 0 / 58%);
     }
     .moreinfo {
-        padding-left: 220px;
-        padding-right: 220px;
+        padding-left: 270px;
+        padding-right: 270px;
     }
     nav ul a {
         text-align: center;

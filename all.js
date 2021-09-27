@@ -5,34 +5,31 @@ function topnav() {
     var z = document.getElementById("nav")
     if (x.style.display === "block") {
         x.style.display = "none";
-        y.classList.remove("material-icons-round")
         y.innerText = "menu";
-        y.classList.remove("underline");
-        y.style.fontSize = "19px";
-        y.style.width = "50px";
+        y.style.fontSize = "30px";
         y.style.borderRadius = "13px"
-        y.style.margin = "22px";
         y.style.padding = "10px";
-        y.classList.add('frostedglass');
+        y.style.margin = "0"
+        y.style.background = "rgb(64, 64, 64)";
         y.style.backgroundColor = "rgba(--blackbg .5)";
-        z.classList.remove('frostedglass');
-        z.style.height = "0";
+        z.classList.remove("frostedglass");
+        z.style.height = "auto";
+        z.style.width = "auto";
+        z.style.margin = "22px";
+        z.style.borderRadius = "13px";
     } else {
         x.style.display = "block";
-        y.classList.add("material-icons-round");
         y.innerText = "close";
         y.classList.add("underline");
         y.style.fontSize = "24px";
-        y.style.padding = "30px";
-        y.style.margin = "0"
-        y.style.backgroundColor = "rgba(--blackbg .5)";
-        x.style.paddingTop = "0";
-        y.style.borderRadius = "0";
+        y.style.margin = "22px"
+        y.style.background = "none";
         z.style.backgroundColor = "rgba(--blackbg .5)";
-        z.style.width = "100%";
         z.style.height = "100%";
-        y.classList.remove("frostedglass");
-        z.classList.add('frostedglass');
+        z.style.borderRadius = "0";
+        z.style.width = "100%";
+        z.style.margin = "0";
+        z.classList.add("frostedglass");
     }
 }
 async function init() {
