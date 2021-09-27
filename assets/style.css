@@ -6,6 +6,13 @@
     src: url('icons.woff2')
 }
 
+@font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/material-icons-round.woff2) format('woff2');
+}
+
 .fa-discord:before { content: "\f392"; }
 
 .fa-lastfm:before { content: "\f202"; }
@@ -26,13 +33,6 @@
     line-height: 1;
 }
 
-@font-face {
-    font-family: 'Material Icons Round';
-    font-style: normal;
-    font-weight: 400;
-    src: url(/assets/material-icons-round.woff2) format('woff2');
-}
-
 .material-icons-round {
     font-family: 'Material Icons Round';
     font-weight: normal;
@@ -47,6 +47,11 @@
     direction: ltr;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+}
+
+@font-face{
+    src: url('Rubik-Regular.woff2');
+    font-family: 'Rubik';
 }
 
 :root {
