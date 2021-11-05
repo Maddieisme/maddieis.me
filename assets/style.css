@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'Material Icons Round';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     src: url(/assets/material-icons-round.woff2) format('woff2');
 }
 
@@ -48,15 +48,16 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-
+/*
 @font-face{
     src: url('Rubik-Regular.woff2');
     font-family: 'Rubik';
 }
-
+*/
 :root {
+    word-spacing: 1.7px;
     --text-color: #fff;
-    --blackbg: 20, 20, 20;
+    --blackbg: 15, 15, 15;
     --graybg: 40, 40, 40;
     --tint-color: rgb(14, 176, 186);
 }
@@ -66,7 +67,7 @@ a:hover {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
     font-weight: regular;
     background: rgba(var(--blackbg));
     margin: 0;
@@ -75,6 +76,10 @@ body {
     color: var(--text-color);
     -ms-overflow-style: none;
     scrollbar-width: none;
+    font-weight: 600;
+}
+p{
+    font-size: 18px;
 }
 
  ::-webkit-scrollbar {
@@ -102,10 +107,10 @@ a:active {
 }
 
 nav {
+    font-weight: 600;
     background:rgb(64, 64, 64);
     border-radius: 13px;
     margin: 22px;
-    width: 80%;
     padding: 1px 1px;
     font-size: 17px;
     position: fixed;
@@ -164,6 +169,10 @@ nav a:active{
     filter: brightness(50%);
 }
 
+.container h1{
+    font-size: 40px;
+}
+
 .align h1{
     font-size: 80px;
     text-align: center;
@@ -171,7 +180,7 @@ nav a:active{
 }
 
 h2, .align h2{
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
 
@@ -221,10 +230,12 @@ section h2 {
     margin: 0;
     padding: .9em;
     padding-bottom: 1em;
+    color: rgb(170, 170, 170);
 }
 
-footer {
+footer, footer p {
     width: 100%;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -305,6 +316,7 @@ footer li {
     padding-left: 2.5em;
     padding-right: 2.5em;
     padding-top: .5em;
+    font-size: 20px;
 }
 
 .music * {
@@ -318,24 +330,26 @@ footer li {
 .projitem {
     width: 94%;
     max-width: 600px;
-    border-radius: 18px;
-    text-align: center;
+    border-radius: 9px;
+    text-align: left;
     margin: 0 auto;
     margin-bottom: 1em;
-    background-color: rgba(var(--graybg), .90);
-    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 58%);
     transition: all .1s ease-in-out;
+    border: 3px rgb(var(--graybg), 1) solid;
 }
 
 .projitem p {
     margin: 0;
-    padding: .9em;
+    padding: 16px;
     padding-bottom: 1em;
     padding-top: .25em;
+    color:rgb(170, 170, 170);
 }
 
 .projitem h2 {
     padding-top: 10px;
+    text-align: left;
+    padding-left: 16px;
 }
 
 .projitem a {
@@ -382,7 +396,8 @@ footer li {
         padding-top: 0;
         margin: 1;
         height: 1;
-        padding: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         box-shadow: 2px 2px 11px 1px rgb(0 0 0 / 58%);
     }
     .moreinfo {

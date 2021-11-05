@@ -10,7 +10,7 @@ function topnav() {
         y.style.borderRadius = "13px"
         y.style.padding = "10px";
         y.style.margin = "0"
-        y.style.background = "rgb(64, 64, 64)";
+        y.classList.add("frostedglass");
         y.style.backgroundColor = "rgba(--blackbg .5)";
         z.classList.remove("frostedglass");
         z.style.height = "auto";
@@ -24,6 +24,7 @@ function topnav() {
         y.style.fontSize = "24px";
         y.style.margin = "22px"
         y.style.background = "none";
+        y.classList.remove("frostedglass");
         z.style.backgroundColor = "rgba(--blackbg .5)";
         z.style.height = "100%";
         z.style.borderRadius = "0";
