@@ -1,36 +1,30 @@
 //navbar handler
 function topnav() {
-    var x = document.getElementById("navLinks");
-    var y = document.getElementById("menu");
+    var x = document.getElementById("navLinks")
+    var y = document.getElementById("menu")
     var z = document.getElementById("nav")
     if (x.style.display === "block") {
-        x.style.display = "none";
-        y.innerText = "menu";
-        y.style.fontSize = "30px";
+        x.style.display = "none"
+        y.innerText = "menu"
+        y.style.fontSize = "30px"
         y.style.borderRadius = "13px"
-        y.style.padding = "10px";
+        y.style.padding = "8px"
         y.style.margin = "0"
-        y.classList.add("frostedglass");
-        y.style.backgroundColor = "rgba(--blackbg .5)";
-        z.classList.remove("frostedglass");
-        z.style.height = "auto";
-        z.style.width = "auto";
-        z.style.margin = "22px";
-        z.style.borderRadius = "13px";
+        z.style.height = "auto"
+        z.style.width = "auto"
+        z.style.margin = "13px"
+        z.style.borderRadius = "13px"
     } else {
-        x.style.display = "block";
-        y.innerText = "close";
-        y.classList.add("underline");
-        y.style.fontSize = "24px";
-        y.style.margin = "22px"
-        y.style.background = "none";
-        y.classList.remove("frostedglass");
-        z.style.backgroundColor = "rgba(--blackbg .5)";
-        z.style.height = "100%";
-        z.style.borderRadius = "0";
-        z.style.width = "100%";
-        z.style.margin = "0";
-        z.classList.add("frostedglass");
+        x.style.display = "block"
+        y.innerText = "close"
+        y.style.fontSize = "24px"
+        y.style.margin = "20px"
+        y.style.background = "none"
+        z.style.backgroundColor = "rgba(--blackbg .5)"
+        z.style.height = "100%"
+        z.style.borderRadius = "0"
+        z.style.width = "100%"
+        z.style.margin = "0"
     }
 }
 async function init() {

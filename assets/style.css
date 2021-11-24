@@ -48,12 +48,7 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-/*
-@font-face{
-    src: url('Rubik-Regular.woff2');
-    font-family: 'Rubik';
-}
-*/
+
 :root {
     word-spacing: 1.7px;
     --text-color: #fff;
@@ -76,8 +71,13 @@ body {
     color: var(--text-color);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-weight: 600;
+    font-weight: 900;
 }
+
+h1{
+    font-size: 30px;
+}
+
 p{
     font-size: 18px;
 }
@@ -90,8 +90,6 @@ a {
     color: var(--tint-color);
     text-decoration: none;
 }
-
-/*TODO: dont use this workaround to fix a bug with align h3 anchor things not working*/
 
 .align h3:hover,
 a:hover {
@@ -108,31 +106,18 @@ a:active {
 
 nav {
     font-weight: 600;
-    background:rgb(64, 64, 64);
+    background:rgb(var(--blackbg));
     border-radius: 13px;
-    margin: 22px;
-    padding: 1px 1px;
     font-size: 17px;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 1;
-    width: auto;
     text-transform: uppercase;
+    padding: 2px;
+    margin: 13px;
 }
 
 i{
     width: auto;
-}
-
-nav ul {
-    opacity: 100%;
-    display: none;
-    text-align: left;
-    letter-spacing: 1.5px;
-    padding-top: 9px;
-    margin: 1;
-    animation: fade 0.15s forwards linear;
 }
 
 nav ul {
@@ -149,15 +134,15 @@ nav a {
 }
 
 nav ul a {
-    font-size: 19px;
+    font-size: 17px;
     padding: 10px 30px;
     display: block;
 }
 
 #menu {
+    padding: 8px;
     display: block;
     font-size: 30px;
-    padding: 12px;
 }
 
 nav a:hover {
@@ -170,21 +155,22 @@ nav a:active{
 }
 
 .container h1{
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .align h1{
     font-size: 80px;
     text-align: center;
+    padding: 0;
     padding-top: 30px;
 }
 
 h2, .align h2{
-    font-size: 25px;
-    text-align: center;
+    font-size: 22px;
 }
 
 .align {
+    text-align: center;
     width: 100%;
     padding-bottom: 20px;
 }
@@ -212,15 +198,21 @@ a.ico:active {
     transform: scale(.90);
 }
 
+.align h3{
+    font-size: 20px;
+}
+
 .container {
-    text-align: center;
+    text-align: left;
     min-height: 100%;
     position: relative;
-    padding-top: 75px;
+    padding-top: 80px;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
 }
 
 section h2 {
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: .1em;
     padding-top: 20px;
     margin: 0;
@@ -228,7 +220,7 @@ section h2 {
 
 .container section p {
     margin: 0;
-    padding: .9em;
+    padding-top: 1em;
     padding-bottom: 1em;
     color: rgb(170, 170, 170);
 }
@@ -259,8 +251,8 @@ footer li {
 }
 
 .moreinfo {
-    padding-left: 0.7em;
-    padding-right: 0.7em;
+    padding-left: 22.4px;
+    padding-right: 22.4px;
 }
 
 .music {
@@ -332,15 +324,13 @@ footer li {
     max-width: 600px;
     border-radius: 9px;
     text-align: left;
-    margin: 0 auto;
     margin-bottom: 1em;
     transition: all .1s ease-in-out;
-    border: 3px rgb(var(--graybg), 1) solid;
+    /*&border: 3px rgb(var(--graybg), 1) solid;*/
 }
 
 .projitem p {
     margin: 0;
-    padding: 16px;
     padding-bottom: 1em;
     padding-top: .25em;
     color:rgb(170, 170, 170);
@@ -349,7 +339,6 @@ footer li {
 .projitem h2 {
     padding-top: 10px;
     text-align: left;
-    padding-left: 16px;
 }
 
 .projitem a {
@@ -370,20 +359,27 @@ footer li {
 }
 
 .frostedglass {
-    background-color: rgba(64, 64, 64, .5);
+    background-color: rgba(var(--blackbg), 0.5);
     backdrop-filter: brightness(80%);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
 }
 
 @media only screen and (min-width: 1000px) {
+    section{
+        width: 600px;
+    }
     nav {
+        width: auto;
         display: flex;
         justify-content: center;
         right: 0;
-        left: 0;
-        background: none;
-        margin: 12px;
+        margin: 0 auto;
+        background-color: rgb(var(--blackbg), .5);
+        backdrop-filter: brightness(80%);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(20px);
+        margin-top: 10px;
     }
     nav #menu {
         display: none;
@@ -391,16 +387,12 @@ footer li {
     nav ul {
         display: flex;
         justify-content: center;
-        background-color: rgb(64, 64, 64);
         border-radius: 13px;
         padding-top: 0;
         margin: 1;
         height: 1;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        box-shadow: 2px 2px 11px 1px rgb(0 0 0 / 58%);
     }
-    .moreinfo {
+    .moreinfo, .container {
         padding-left: 270px;
         padding-right: 270px;
     }
@@ -412,6 +404,6 @@ footer li {
         padding-right: 20px;
     }
     .container {
-        padding-top: 75px;
+        padding-top: 80px;
     }
 }
