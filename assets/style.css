@@ -52,17 +52,20 @@
 :root {
     word-spacing: 1.7px;
     --text-color: #fff;
-    --blackbg: 15, 15, 15;
+    --blackbg: 10, 10, 10;
     --graybg: 40, 40, 40;
     --tint-color: rgb(14, 176, 186);
 }
-
+::selection{
+    color: #000;
+    background: #fff;
+}
 a:hover {
     filter: brightness(80%);
 }
 
 body {
-    font-family: 'Zen Maru Gothic', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: regular;
     background: rgba(var(--blackbg));
     margin: 0;
@@ -71,7 +74,6 @@ body {
     color: var(--text-color);
     -ms-overflow-style: none;
     scrollbar-width: none;
-    font-weight: 900;
 }
 
 h1{
@@ -222,7 +224,7 @@ section h2 {
     margin: 0;
     padding-top: 1em;
     padding-bottom: 1em;
-    color: rgb(170, 170, 170);
+    color: rgb(120, 120, 120);
 }
 
 footer, footer p {
