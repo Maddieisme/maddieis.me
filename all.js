@@ -6,7 +6,7 @@ function topnav() {
     if (x.style.display === "block") {
         x.style.display = "none"
         y.innerText = "menu"
-        y.style.fontSize = "30px"
+        y.style.fontSize = "25px"
         y.style.borderRadius = "13px"
         y.style.padding = "8px"
         y.style.margin = "0"
@@ -17,7 +17,7 @@ function topnav() {
     } else {
         x.style.display = "block"
         y.innerText = "close"
-        y.style.fontSize = "24px"
+        y.style.fontSize = "19px"
         y.style.margin = "20px"
         y.style.background = "none"
         z.style.backgroundColor = "rgba(--blackbg .5)"
