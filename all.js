@@ -8,11 +8,12 @@ function topnav() {
         y.innerText = "menu"
         y.style.fontSize = "25px"
         y.style.borderRadius = "13px"
-        y.style.padding = "8px"
-        y.style.margin = "0"
+        y.style.margin = "0";
+        z.style.padding = "2px"
+        z.style.margin = "6px"
         z.style.height = "auto"
         z.style.width = "auto"
-        z.style.margin = "13px"
+        z.style.margin = "6px"
         z.style.borderRadius = "13px"
     } else {
         x.style.display = "block"

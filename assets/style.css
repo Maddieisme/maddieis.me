@@ -107,6 +107,7 @@ a:active {
 }
 
 nav {
+    right: 0;
     font-weight: 600;
     background:rgb(var(--blackbg));
     border-radius: 13px;
@@ -115,7 +116,7 @@ nav {
     z-index: 1;
     text-transform: uppercase;
     padding: 2px;
-    margin: 13px;
+    margin: 6px;
 }
 
 i{
@@ -209,8 +210,8 @@ a.ico:active {
     min-height: 100%;
     position: relative;
     padding-top: 80px;
-    padding-left: 0.7em;
-    padding-right: 0.7em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
 }
 
 section h2 {
