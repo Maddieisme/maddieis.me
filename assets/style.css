@@ -67,7 +67,7 @@ a:hover {
 body {
     font-family: 'Inter', sans-serif;
     font-weight: regular;
-    background: rgba(var(--blackbg));
+    background-color: rgba(var(--blackbg));
     margin: 0;
     padding: 0;
     height: 100%;
