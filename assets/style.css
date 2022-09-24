@@ -162,10 +162,10 @@ nav a:active{
 }
 
 .align h1{
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     padding: 0;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 h2, .align h2{
@@ -203,13 +203,14 @@ a.ico:active {
 
 .align h3{
     font-size: 20px;
+    width: 1;
 }
 
 .container {
     text-align: left;
     min-height: 100%;
     position: relative;
-    padding-top: 80px;
+    padding-top: 100px;
     padding-left: 0.75em;
     padding-right: 0.75em;
 }
