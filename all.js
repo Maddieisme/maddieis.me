@@ -29,7 +29,7 @@ function topnav() {
     }
 }
 async function init() {
-    const json = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&page=1&nowplaying="true"&user=Mattstar45&api_key=ea951fd34f50fdaf09f0c8e7bc8f184d&format=json');
+    const json = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&page=1&nowplaying="true"&user=maddieisme&api_key=ea951fd34f50fdaf09f0c8e7bc8f184d&format=json');
     let { recenttracks } = await json.json();
     if (document.getElementById("url") != recenttracks.track[0].url) {
 
