@@ -52,7 +52,7 @@
 :root {
     word-spacing: 1.25px;
     --text-color: #fff;
-    --blackbg: 10, 10, 10;
+    --blackbg: 0, 0, 0;
     --graybg: 40, 40, 40;
     --tint-color: rgb(14, 176, 186);
 }
