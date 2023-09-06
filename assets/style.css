@@ -162,14 +162,14 @@ nav a:active{
 }
 
 .align h1{
-    font-size: 70px;
+    font-size: 54px;
     text-align: center;
     padding: 0;
     padding-top: 20px;
 }
 
 h2, .align h2{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .align {
@@ -206,6 +206,7 @@ a.ico:active {
     width: 1;
 }
 
+/*TODO: make alignment more centered pls*/
 .container {
     text-align: left;
     min-height: 100%;
@@ -338,7 +339,7 @@ footer li {
     padding-top: .25em;
     color:rgb(144, 144, 147);
 }
-
+/*TODO: make everything more aligned pls*/
 .projitem h2 {
     padding-top: 10px;
     text-align: left;
